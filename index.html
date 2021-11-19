@@ -40,14 +40,7 @@
         margin: 10px 20px;
         width: 100px;
       }
-      .para{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex:1;
-      margin: 100px;
-      }
+     
       #btn input{
         color: white;
         margin: 20px;
@@ -61,7 +54,10 @@
       width: 100%;
       }
 
-
+      p{
+        font-size: 30px;
+        font-weight: 600;
+      }
 
     </style>
   </head>
@@ -82,9 +78,10 @@
       <input class="btn btn-outline-dark" type="reset" value="Reset">
           </div>
     </form>
-    <div id="para" >
-    <p id="res"></p>
-    <p id="rate"></p>
+    <div>
+    <p id="res"  class="text-center"></p>
+    <p id="rate"  class="text-center"></p>
+    <h6 class="text-center"> Note: Parking Entrance and Exit time must be on same day, Entrance fee 2Rs, 1st One Hour fees 3Rs, Next successive hours or Partial Min cost 4 Rs.</h6>
   </div>
     </div>
     <script>
@@ -123,15 +120,11 @@
         {
           rate = (2 + 3 + (total_hrs-1)* 4 + 4);
         }
-        document.getElementById("res").innerHTML= `Total Parking Hours ${total_hrs} hrs : ${total_min} mins`;
+        document.getElementById("res").innerHTML= `Total Parking Hours = ${total_hrs} hrs : ${total_min} mins`;
         document.getElementById("rate").innerHTML = `Total Parking Rate = ${rate} Rupees` ;
         console.log(calc_hrs);
 
-     console.log(calc_min);
-      console.log(total_hrs);
-        console.log(total_min);
-
-      }
+       }
 
     </script>
   </body>
